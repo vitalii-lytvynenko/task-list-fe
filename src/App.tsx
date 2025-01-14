@@ -1,14 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { UserWarning } from './UserWarning';
-import {
-  createTodo,
-  deleteTodo,
-  editTodo,
-  getTodos,
-  USER_ID,
-} from './api/todos';
+import { createTodo, deleteTodo, editTodo, getTodos } from './api/todos';
 import { ErrorMessages, FilterOptions, Todo } from './types';
 import { TodoList } from './components/TodoList';
 import { Header } from './components/Header';
@@ -51,7 +44,6 @@ export const App: React.FC = () => {
 
   const handleAddTodo = async (title: string) => {
     const newTodo: Omit<Todo, 'id'> = {
-      userId: USER_ID,
       title,
       completed: false,
     };
@@ -192,10 +184,6 @@ export const App: React.FC = () => {
     () => getPrepearedTodos(todos, filterType),
     [todos, filterType],
   );
-
-  if (!USER_ID) {
-    return <UserWarning />;
-  }
 
   return (
     <div className="todoapp">

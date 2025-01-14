@@ -4,8 +4,6 @@
 This is a Todo application built with React, TypeScript, and SCSS. The app interacts with a remote API to allow users to manage their todo lists, including adding, editing, and deleting items.
 
 ## Demo
-You can view the live demo of the project here: [DEMO LINK](https://vitalii-lytvynenko.github.io/todo-app-with-api/)
-
 ![image](https://github.com/user-attachments/assets/644f6d7c-a0ab-4864-9038-9e3c70e7deb3)
 
 ## Project Structure
@@ -38,11 +36,11 @@ To run the project locally, follow these steps:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/vitalii-lytvynenko/todo-app-with-api.git
+   git clone https://github.com/vitalii-lytvynenko/task-list-fe.git
    ```
 2. Navigate to the project directory:
    ```
-   cd todo-app-with-api
+   cd task-list-fe
    ```
 3. Install the dependencies:
    ```
